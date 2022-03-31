@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Services\Cat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{066A3499-8328-43E4-A83A-20CF3BFB857A}"
 	ProjectSection(SolutionItems) = preProject
-		Terminal commands.txt = Terminal commands.txt
+		Docker commands.txt = Docker commands.txt
 	EndProjectSection
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{11020D8A-392B-45ED-9446-914DB2D7F226}"

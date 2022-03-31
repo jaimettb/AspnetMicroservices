@@ -1,3 +1,0 @@
- > Run mongo db docker container
- docker run -d -p 27017:27017 --name shopping-mongo mongo
-

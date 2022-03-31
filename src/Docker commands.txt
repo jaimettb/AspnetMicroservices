@@ -1,0 +1,24 @@
+### Docker ###
+> Run mongo db docker container
+docker run -d -p 27017:27017 --name shopping-mongo mongo
+
+> Run docker compose
+docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml up -d
+
+> Down docker compose
+docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml down
+
+> List running containers
+docker ps -aq
+
+> Stop running containers
+docker stop $(docker ps -aq)
+
+> Remove all images
+docker rmi $(docker images -q)
+
+> Cleanup unused dosker resources
+docker system prune
+
+> Run mongo client
+docker run -d -p 3000:3000 mongoclient/mongoclient
