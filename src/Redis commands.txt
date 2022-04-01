@@ -1,0 +1,10 @@
+> Enter on CLI commands
+redis-cli
+
+> Ping to check if it is OK
+ping
+
+> Set and get value
+set name jaime
+get name //Will return jaime
+

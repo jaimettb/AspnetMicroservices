@@ -22,3 +22,9 @@ docker system prune
 
 > Run mongo client
 docker run -d -p 3000:3000 mongoclient/mongoclient
+
+> Run Redis
+docker run -d -p 6379:6379 --name aspnetrun-redis redis
+
+> Interactive commands on redis
+docker exec -it aspnetrun-redis /bin/bash
