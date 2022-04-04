@@ -12,7 +12,7 @@ namespace Basket.API.Entities
         {
             get
             {
-                return Items.Sum(i => i.Prive * i.Quantity);
+                return Items.Sum(i => i.Price * i.Quantity);
             }
         }
 

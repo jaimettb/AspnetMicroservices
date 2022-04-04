@@ -20,7 +20,7 @@ namespace Basket.API.Controllers
             _repository = repository;
         }
 
-        [HttpGet("{UserName}", Name = "GetBasket")]
+        [HttpGet("UserName", Name = "GetBasket")]
         [ProducesResponseType(typeof(ShoppingCart), (int) HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> GetBasket(string userName)
         {
@@ -28,9 +28,18 @@ namespace Basket.API.Controllers
             return Ok(basket?? new ShoppingCart(userName));
         }
 
+        [HttpPost]
+        [ProducesResponseType(typeof(ShoppingCart), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> UpdateBasket([FromBody] ShoppingCart basket)
         {
             return Ok(await _repository.UpdataBasket(basket));
+        }
+
+        [HttpDelete("UserName", Name = "DeleteBasket")]
+        public async Task<ActionResult<ShoppingCart>> DeleteBasket(string userName)
+        {
+            await _repository.DeleteBasket(userName).ConfigureAwait(false);
+            return Ok();
         }
     }
 }
