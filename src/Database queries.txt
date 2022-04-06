@@ -1,0 +1,11 @@
+#Create cupon tamble
+CREATE TABLE Coupon(
+	ID SERIAL PRIMARY KEY NOT NULL,
+	ProductName VARCHAR(24) NOT NULL,
+	Description TEXT,
+	Amount INT
+)
+
+#Insert coupons
+INSERT INTO Coupon (ProductName, Description, Amount) VALUES ('IPhone X', 'IPhone Discount', 150);
+INSERT INTO Coupon (ProductName, Description, Amount) VALUES ('Sansung 10', 'Sansung Discount', 100);
