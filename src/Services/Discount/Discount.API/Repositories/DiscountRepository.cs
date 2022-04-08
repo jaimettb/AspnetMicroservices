@@ -52,7 +52,7 @@ namespace Discount.API.Repositories
             using var connection = GetConnection();
 
             var affected = await connection.ExecuteAsync
-                ("UPDATE Coupon SET ProductName = @ProductName, Description = @Description, Amount = @Amount",
+                ("UPDATE Coupon SET ProductName = @ProductName, Description = @Description, Amount = @Amount Where ProductName = @ProductName",
                 new { coupon.ProductName, coupon.Description, coupon.Amount });
 
             if (affected == 0)
