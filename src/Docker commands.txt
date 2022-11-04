@@ -5,6 +5,9 @@ docker run -d -p 27017:27017 --name shopping-mongo mongo
 > Run docker compose
 docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml up -d
 
+> Run docker compose and rebuild images
+docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml up --build
+
 > Down docker compose
 docker-compose -f .\docker-compose.yml -f .\docker-compose.override.yml down
 

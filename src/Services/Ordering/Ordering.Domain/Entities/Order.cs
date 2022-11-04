@@ -1,4 +1,4 @@
-﻿using Ordering.Domain.Commen;
+﻿using Ordering.Domain.Common;
 
 namespace Ordering.Domain.Entities
 {
