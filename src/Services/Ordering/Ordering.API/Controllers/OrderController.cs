@@ -22,7 +22,7 @@ namespace Ordering.API.Controllers
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }
 
-        [HttpGet("{username", Name = "GetOrder")]
+        [HttpGet("{userName}", Name = "GetOrder")]
         [ProducesResponseType(typeof(IEquatable<OrdersVm>), (int) HttpStatusCode.OK)]
         public async Task<ActionResult<IEquatable<OrdersVm>>> GetOrdersByUserName(string userName)
         {
@@ -40,7 +40,7 @@ namespace Ordering.API.Controllers
             return Ok(result);
         }
 
-        [HttpPost(Name = "UpdateOrder")]
+        [HttpPut(Name = "UpdateOrder")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
@@ -50,7 +50,7 @@ namespace Ordering.API.Controllers
             return NoContent();
         }
 
-        [HttpPost("{id}", Name = "DeleteOrder")]
+        [HttpDelete("{id}", Name = "DeleteOrder")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesDefaultResponseType]
