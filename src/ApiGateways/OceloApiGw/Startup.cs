@@ -1,5 +1,6 @@
 ﻿using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Cache.CacheManager;
 
 namespace OcelotApiGw
 {
@@ -7,8 +8,8 @@ namespace OcelotApiGw
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOcelot();
-                //.AddCacheManager(settings => settings.WithDictionaryHandle());
+            services.AddOcelot()
+                .AddCacheManager(settings => settings.WithDictionaryHandle());
         }
 
         public async void Configure(IApplicationBuilder app, IWebHostEnvironment env)
