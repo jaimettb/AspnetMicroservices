@@ -23,7 +23,7 @@ services:
     image: portainer/portainer-ce
 
   mongoclient:
-    image: mongoclient/mongoclient:4.0.0
+    image: mongoclient/mongoclient
 
   catalog.api:
     image: ${DOCKER_REGISTRY-}catalogapi
